@@ -18,6 +18,7 @@ public class LoginTest extends BaseTest{
 		loginPage.enterPassword(PW);
 		loginPage.enterPassCode(PassCode);
 		loginPage.clickOnLoginButton();
+		System.out.println("Hii");
 		
 		
 	}
