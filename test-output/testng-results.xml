@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="95848" started-at="2021-01-14T05:28:55Z" finished-at="2021-01-14T05:30:31Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="95848" started-at="2021-01-14T05:28:55Z" finished-at="2021-01-14T05:30:31Z">
+      <class name="TestCases.CreateVendorTest">
+        <test-method status="PASS" signature="initApplication()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="initApplication" is-config="true" duration-ms="20638" started-at="2021-01-14T05:28:34Z" finished-at="2021-01-14T05:28:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initApplication -->
+        <test-method status="PASS" signature="Extent()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="Extent" is-config="true" duration-ms="742" started-at="2021-01-14T05:28:55Z" finished-at="2021-01-14T05:28:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Extent -->
+        <test-method status="PASS" signature="createVendor()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="createVendor" duration-ms="94484" started-at="2021-01-14T05:28:56Z" finished-at="2021-01-14T05:30:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createVendor -->
+        <test-method status="PASS" signature="TakeScreenshot(org.testng.ITestResult)[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="TakeScreenshot" is-config="true" duration-ms="5" started-at="2021-01-14T05:30:30Z" finished-at="2021-01-14T05:30:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=createVendor status=SUCCESS method=CreateVendorTest.createVendor()[pri:0, instance:TestCases.CreateVendorTest@53b32d7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TakeScreenshot -->
+        <test-method status="PASS" signature="GenerareReport()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="GenerareReport" is-config="true" duration-ms="571" started-at="2021-01-14T05:30:30Z" finished-at="2021-01-14T05:30:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GenerareReport -->
+        <test-method status="PASS" signature="CloseFramework()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="CloseFramework" is-config="true" duration-ms="1" started-at="2021-01-14T05:30:31Z" finished-at="2021-01-14T05:30:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseFramework -->
+      </class> <!-- TestCases.CreateVendorTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

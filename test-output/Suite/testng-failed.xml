@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Vendor OnBoarding(failed)">
+    <classes>
+      <class name="TestCases.CreateVendorTest">
+        <methods>
+          <include name="CloseFramework"/>
+          <include name="createVendor"/>
+          <include name="Extent"/>
+          <include name="GenerareReport"/>
+          <include name="TakeScreenshot"/>
+          <include name="initApplication"/>
+        </methods>
+      </class> <!-- TestCases.CreateVendorTest -->
+    </classes>
+  </test> <!-- Vendor OnBoarding(failed) -->
+</suite> <!-- Failed suite [Suite] -->
