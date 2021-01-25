@@ -34,6 +34,9 @@ public class CreateVendorPage extends BasePage {
 	private WebElement enterVENDORPassword;
 	
 	@FindBy(xpath="//*[@class='col-sm-4 fileUpload btn-sm table_button_link text-center pullup']")
+	private WebElement enterlogo;
+	
+	@FindBy(xpath="//*[@class='col-sm-4 fileUpload btn-sm table_button_link text-center pullup']")
 	private WebElement clickOnUPLOADButtonForLoGo;
 	
 	@FindBy(id="vendormode")
@@ -93,6 +96,9 @@ public class CreateVendorPage extends BasePage {
 	@FindBy(xpath="/html/body/div[1]/div/div[2]")
 	private WebElement tapConddition;
 	
+	@FindBy(xpath="//div[@class='row']")
+	private WebElement tapHalf;
+	
 	@FindBy(xpath="//button[@class='fileUpload btn-sm table_button_link']")
 	private WebElement clickOnCREATEButton;
 	
@@ -135,20 +141,28 @@ public class CreateVendorPage extends BasePage {
 		enterVENDORPassword.sendKeys(vendorPassword);
 		System.out.println(vendorPassword);
 	}
-	
-	//LOGO PENDING
+
+	public void enterLogo() throws InterruptedException, IOException 
+	{
+		waitTillTheElementVisible(enterlogo);
+		enterlogo.click();
+		Thread.sleep(3000);
+		Runtime.getRuntime().exec("D:\\Automation AutoITPath\\onboardingAutomation.exe");
+		Thread.sleep(3000);
+	}
 	
 	public void selectTheVendorMODE() throws InterruptedException, IOException 
 	{
 		waitTillTheElementVisible(clickOnVendorMODEDropDown);
 		clickOnVendorMODEDropDown.click();
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 		
 		Select select = new Select(clickOnVendorMODEDropDown);
 		String vendorMODE = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,5,1);
 		select.selectByVisibleText(vendorMODE);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		
 		System.out.println(vendorMODE);
 	}
@@ -163,7 +177,8 @@ public class CreateVendorPage extends BasePage {
 		String vendorTYPE = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,6,1);
 		select.selectByVisibleText(vendorTYPE);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(vendorTYPE);
 	}
 	
@@ -177,7 +192,8 @@ public class CreateVendorPage extends BasePage {
 		String vendorPlanIntervals = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,7,1);
 		select.selectByVisibleText(vendorPlanIntervals);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(vendorPlanIntervals);
 	}
 	
@@ -195,7 +211,8 @@ public class CreateVendorPage extends BasePage {
 		String vendorPlan = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,8,1);
 		select.selectByVisibleText(vendorPlan);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(vendorPlan);
 	}
 	
@@ -215,7 +232,8 @@ public class CreateVendorPage extends BasePage {
 		
 		select.selectByVisibleText(vendorPlanMode);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(vendorPlanMode);
 	}
 	
@@ -234,7 +252,8 @@ public class CreateVendorPage extends BasePage {
 		String vendorAPPAccessMode = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,10,1);
 		select.selectByVisibleText(vendorAPPAccessMode);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(vendorAPPAccessMode);
 		
 	}
@@ -275,7 +294,8 @@ public class CreateVendorPage extends BasePage {
 		String stream = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,13,1);
 		select.selectByVisibleText(stream);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(stream);	
 	}
 	
@@ -293,7 +313,8 @@ public class CreateVendorPage extends BasePage {
 		String HD = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,14,1);
 		select.selectByVisibleText(HD);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(HD);	
 	}
 	
@@ -311,7 +332,8 @@ public class CreateVendorPage extends BasePage {
 		String ADD = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,15,1);
 		select.selectByVisibleText(ADD);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(ADD);	
 	}
 	
@@ -329,7 +351,8 @@ public class CreateVendorPage extends BasePage {
 		String DRM = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,16,1);
 		select.selectByVisibleText(DRM);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(DRM);	
 	}
 	
@@ -347,7 +370,8 @@ public class CreateVendorPage extends BasePage {
 		String Payment = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,17,1);
 		select.selectByVisibleText(Payment);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(Payment);	
 	}
 	
@@ -365,7 +389,8 @@ public class CreateVendorPage extends BasePage {
 		String Institute = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,18,1);
 		select.selectByVisibleText(Institute);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(Institute);	
 	}
 	
@@ -383,7 +408,8 @@ public class CreateVendorPage extends BasePage {
 		String levle = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,19,1);
 		select.selectByVisibleText(levle);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(levle);	
 	}
 	
@@ -401,7 +427,8 @@ public class CreateVendorPage extends BasePage {
 		String bulk = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,20,1);
 		select.selectByVisibleText(bulk);
 		Thread.sleep(1000);
-		tapConddition.click();
+		//tapConddition.click();
+		tapHalf.click();
 		System.out.println(bulk);
 	}
 	

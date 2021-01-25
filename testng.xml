@@ -5,7 +5,6 @@
   <test name="Vendor OnBoarding">
     <classes>
     
-      <class name="TestCases.LoginTest"/>
       <class name="TestCases.CreateVendorTest"/>
       
     </classes>

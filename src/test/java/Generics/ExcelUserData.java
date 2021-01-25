@@ -13,9 +13,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUserData {
 	
-
-
-
 	public static String dataFromExcelSheet(String filepath,String filename,String Pagename,int i,int j) throws IOException
 	{
 		String Value;
@@ -43,8 +40,11 @@ public class ExcelUserData {
 		Sheet getSheetname = book.getSheet(Pagename);
 
 		//Find number of rows in excel file
-		int rowcount = getSheetname.getLastRowNum();
-		System.out.println(rowcount+"=========>rowcount");
+		
+		/*int rowcount = getSheetname.getLastRowNum();
+		System.out.println(rowcount+"=========>rowcount");*/
+		
+		
 		//Create a loop over all the rows of excel file to read it
 		//		        for(int i=0;i<=rowcount;i++)
 		//		        {
@@ -57,7 +57,7 @@ public class ExcelUserData {
 		try
 		{
 			Value=getSheetname.getRow(i).getCell(j).getStringCellValue();
-			System.out.print("String------->"+getSheetname.getRow(i).getCell(j).getStringCellValue()+"		");
+			System.out.print("Selected Value From Sheet ------->"+getSheetname.getRow(i).getCell(j).getStringCellValue()+"		");
 		} catch (Exception e)
 		{
 			System.out.print(getSheetname.getRow(i).getCell(j).getNumericCellValue()+"    ");

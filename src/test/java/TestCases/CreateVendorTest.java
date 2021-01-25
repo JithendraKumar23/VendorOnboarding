@@ -36,10 +36,11 @@ LoginPage loginPage = new LoginPage(driver);
 		createVendorPage.enterWEBSITE();
 		createVendorPage.enterEMAIL();
 		createVendorPage.enterPassword();
+		createVendorPage.enterLogo();
 		createVendorPage.selectTheVendorMODE();
 		createVendorPage.selectTheVendorTYPE();
 		createVendorPage.selectThePLANIntervals();
-		createVendorPage.selectPlan();
+		/*createVendorPage.selectPlan();
 		createVendorPage.selectPlanMODE();
 		createVendorPage.selectTheAPPAccessMode();
 		createVendorPage.enterTheAppName();
@@ -52,7 +53,7 @@ LoginPage loginPage = new LoginPage(driver);
 		createVendorPage.selectInstituteEnabled();
 		createVendorPage.selectLevelEnabled();
 		createVendorPage.selectBulkEntrollEnabledEnabled();	
-		createVendorPage.clickOnCREATEButton();
+		createVendorPage.clickOnCREATEButton();*/
 	}
 
 }
