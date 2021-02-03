@@ -1,0 +1,14 @@
+JvmtiExport can_access_local_variables 0
+JvmtiExport can_hotswap_or_post_breakpoint 0
+JvmtiExport can_post_on_exceptions 0
+# 133 ciObject found
+ciMethod java/lang/Object <init> ()V 4097 1 179123 0 -1
+ciMethodData java/lang/Object <init> ()V 2 179125 orig 264 152 98 0 119 0 0 0 0 104 4 76 23 0 0 0 0 32 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 77 68 79 32 101 120 116 114 97 32 100 97 116 97 32 108 111 99 107 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 169 205 21 0 1 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 3 0 1 0 0 0 0 0 0 0 255 255 255 255 0 0 0 0 0 0 0 0 data 0 oops 0
+ciMethod java/util/regex/Pattern has (I)Z 2073 1 3326 0 -1
+ciMethod java/util/regex/Pattern peek ()I 3041 1 1522 0 -1
+ciMethod java/util/regex/Pattern read ()I 361 1 45 0 -1
+ciMethod java/util/regex/Pattern next ()I 2369 1 758 0 -1
+ciMethod java/util/regex/Pattern peekPastWhitespace (I)I 0 0 1 0 -1
+ciMethod java/util/regex/Pattern parsePastWhitespace (I)I 0 0 1 0 -1
+ciMethod java/util/regex/Pattern skip ()I 785 1 98 0 -1
+ciMethod 

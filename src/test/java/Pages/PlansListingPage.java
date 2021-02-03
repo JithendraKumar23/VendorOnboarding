@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 import Constant.BasePage;
 import Constant.BaseTest;
 
-public class VendorListPage extends BasePage{
-
-	public VendorListPage(WebDriver driver) 
+public class PlansListingPage extends BasePage{
+	
+	public PlansListingPage(WebDriver driver) 
 	{
 		super(driver);
 		PageFactory.initElements(BaseTest.driver, this);
@@ -20,25 +20,24 @@ public class VendorListPage extends BasePage{
 	@FindBy(xpath = "//button[@class='create_btn fileUpload btn-sm table_button_link' and text()='CREATE NEW']")
 	private WebElement clickONCREATEBUTTON;
 	
-	@FindBy(xpath = "(//button[@class='btn-sm credentialsdata table_button_link'])[1]")
-	private WebElement clickONADDBUTTON;
+	@FindBy(xpath = "//button[@class='btn-sm anchoredit table_button_link']")
+	private WebElement clickONEDITButton;
 	
-	public void clicONCREATEButton() throws InterruptedException 
+	public void clicONCREATEButtonforPlans() throws InterruptedException 
 	{
 		Thread.sleep(1000);
 		waitTillTheElementVisible(clickONCREATEBUTTON);
 		clickONCREATEBUTTON.click();
 	}
-	
-	public void clicONADDButton() throws InterruptedException 
+
+	public void clickEditButton() throws InterruptedException 
 	{
 		Thread.sleep(1000);
-		waitTillTheElementVisible(clickONADDBUTTON);
 		JavascriptExecutor js8 = (JavascriptExecutor)driver;
-		js8.executeScript("arguments[0].scrollIntoView();",clickONADDBUTTON);
-		waitTillTheElementVisible(clickONADDBUTTON);
-		Thread.sleep(1000);
-		clickONADDBUTTON.click();
+		js8.executeScript("arguments[0].scrollIntoView();",clickONEDITButton);
+		waitTillTheElementVisible(clickONEDITButton);
+		Thread.sleep(3000);
+		clickONEDITButton.click();
 	}
 
 }

@@ -43,8 +43,8 @@ public class CreateVendorPage extends BasePage {
 	private WebElement clickOnVendorMODEDropDown;
 	//Use the Select Class
 	
-	@FindBy(id="vendortype")
-	private WebElement clickOnVendorTYPEDropDown;
+	@FindBy(id="premieringenabled")
+	private WebElement clickOnPremieringEnabled;
 	//Use the Select Class
 
 	@FindBy(id="planinterval")
@@ -84,6 +84,18 @@ public class CreateVendorPage extends BasePage {
 	@FindBy(xpath="//*[@name='paymentenabled']")
 	private WebElement clickOnPAYMENTEENABLEDDropDown;
 	
+	@FindBy(xpath="//*[@name='subscriptionenabled']")
+	private WebElement clickOnSUBSCRIPTIONENABLEDDropDown;
+	
+	@FindBy(xpath="//*[@name='eventsenabled']")
+	private WebElement clickOnEVENTENABLEDDropDown;
+	
+	@FindBy(xpath="//*[@name='expiryenabled']")
+	private WebElement clickOnEXPIRYENABLEDDropDown;
+	
+	@FindBy(xpath="//*[@name='contentexpirydaycount']")
+	private WebElement clickOnEXPIRYDayCount;
+	
 	@FindBy(xpath="//*[@name='instituteenabled']")
 	private WebElement clickOnINSTUTUTEENABLEDDropDown;
 	
@@ -92,6 +104,9 @@ public class CreateVendorPage extends BasePage {
 	
 	@FindBy(xpath="//*[@name='bulkenrollenabled']")
 	private WebElement clickOnBULKROLLENABLEDDropDown;
+	
+	@FindBy(xpath="//*[@name='rewardsenabled']")
+	private WebElement clickOnRewardsENABLEDDropDown;
 	
 	@FindBy(xpath="/html/body/div[1]/div/div[2]")
 	private WebElement tapConddition;
@@ -158,7 +173,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(2000);
 		
 		Select select = new Select(clickOnVendorMODEDropDown);
-		String vendorMODE = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,5,1);
+		String vendorMODE = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,10,1);
 		select.selectByVisibleText(vendorMODE);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -167,19 +182,18 @@ public class CreateVendorPage extends BasePage {
 		System.out.println(vendorMODE);
 	}
 	
-	public void selectTheVendorTYPE() throws InterruptedException, IOException 
+	public void selectpremieringEnabled() throws InterruptedException, IOException 
 	{
-		waitTillTheElementVisible(clickOnVendorTYPEDropDown);
-		clickOnVendorTYPEDropDown.click();
+		waitTillTheElementVisible(clickOnPremieringEnabled);
+		clickOnPremieringEnabled.click();
 		Thread.sleep(1000);
 		
-		Select select = new Select(clickOnVendorTYPEDropDown);
-		String vendorTYPE = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,6,1);
-		select.selectByVisibleText(vendorTYPE);
+		Select select = new Select(clickOnPremieringEnabled);
+		String premiere = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,12,1);
+		select.selectByVisibleText(premiere);
 		Thread.sleep(1000);
 		//tapConddition.click();
 		tapHalf.click();
-		System.out.println(vendorTYPE);
 	}
 	
 	public void selectThePLANIntervals() throws InterruptedException, IOException 
@@ -249,7 +263,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnVendorACCESSMODEDropDown);
-		String vendorAPPAccessMode = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,10,1);
+		String vendorAPPAccessMode = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,11,1);
 		select.selectByVisibleText(vendorAPPAccessMode);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -265,7 +279,7 @@ public class CreateVendorPage extends BasePage {
 		JavascriptExecutor js4 = (JavascriptExecutor)driver;
 		js4.executeScript("arguments[0].scrollIntoView();",clickOnAPPNAME);
 		
-		String appNAME = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,11,1);
+		String appNAME = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,5,1);
 		clickOnAPPNAME.sendKeys(appNAME);
 	}
 	
@@ -276,7 +290,7 @@ public class CreateVendorPage extends BasePage {
 		JavascriptExecutor js5 = (JavascriptExecutor)driver;
 		js5.executeScript("arguments[0].scrollIntoView();",clickOnSUPPORTEMAIL);
 		
-		String support = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,12,1);
+		String support = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,6,1);
 		clickOnSUPPORTEMAIL.sendKeys(support);
 	}
 	
@@ -329,7 +343,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnADDENABLEDDropDown);
-		String ADD = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,15,1);
+		String ADD = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,24,1);
 		select.selectByVisibleText(ADD);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -348,7 +362,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnDRMENABLEDDropDown);
-		String DRM = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,16,1);
+		String DRM = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,15,1);
 		select.selectByVisibleText(DRM);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -367,12 +381,88 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnPAYMENTEENABLEDDropDown);
-		String Payment = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,17,1);
+		String Payment = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,16,1);
 		select.selectByVisibleText(Payment);
 		Thread.sleep(1000);
 		//tapConddition.click();
 		tapHalf.click();
 		System.out.println(Payment);	
+	}
+	
+	public void selectSubscriptionEnabled() throws InterruptedException, IOException 
+	{
+		Thread.sleep(3000);
+		waitTillTheElementVisible(clickOnSUBSCRIPTIONENABLEDDropDown);
+		JavascriptExecutor js7 = (JavascriptExecutor)driver;
+		js7.executeScript("arguments[0].scrollIntoView();",clickOnSUBSCRIPTIONENABLEDDropDown);
+		
+		clickOnSUBSCRIPTIONENABLEDDropDown.click();
+		Thread.sleep(1000);
+		
+		Select select = new Select(clickOnSUBSCRIPTIONENABLEDDropDown);
+		String subscription = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,17,1);
+		select.selectByVisibleText(subscription);
+		Thread.sleep(1000);
+		//tapConddition.click();
+		tapHalf.click();
+		System.out.println(subscription);	
+	}
+	
+	public void selectEventEnabled() throws InterruptedException, IOException 
+	{
+		Thread.sleep(3000);
+		waitTillTheElementVisible(clickOnEVENTENABLEDDropDown);
+		JavascriptExecutor js7 = (JavascriptExecutor)driver;
+		js7.executeScript("arguments[0].scrollIntoView();",clickOnEVENTENABLEDDropDown);
+		
+		clickOnEVENTENABLEDDropDown.click();
+		Thread.sleep(1000);
+		
+		Select select = new Select(clickOnEVENTENABLEDDropDown);
+		String event = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,18,1);
+		select.selectByVisibleText(event);
+		Thread.sleep(1000);
+		//tapConddition.click();
+		tapHalf.click();
+		System.out.println(event);	
+	}
+	
+	public void selectExpiryEnabled() throws InterruptedException, IOException 
+	{
+		Thread.sleep(3000);
+		waitTillTheElementVisible(clickOnEXPIRYENABLEDDropDown);
+		JavascriptExecutor js7 = (JavascriptExecutor)driver;
+		js7.executeScript("arguments[0].scrollIntoView();",clickOnEXPIRYENABLEDDropDown);
+		
+		clickOnEXPIRYENABLEDDropDown.click();
+		Thread.sleep(1000);
+		
+		Select select = new Select(clickOnEXPIRYENABLEDDropDown);
+		String expiry = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,19,1);
+		select.selectByVisibleText(expiry);
+		Thread.sleep(1000);
+		//tapConddition.click();
+		tapHalf.click();
+		System.out.println(expiry);	
+	}
+	
+	public void selectExpiryDayCount() throws InterruptedException, IOException 
+	{
+		Thread.sleep(3000);
+		waitTillTheElementVisible(clickOnEXPIRYDayCount);
+		JavascriptExecutor js7 = (JavascriptExecutor)driver;
+		js7.executeScript("arguments[0].scrollIntoView();",clickOnEXPIRYDayCount);
+		
+		clickOnEXPIRYDayCount.click();
+		Thread.sleep(1000);
+		
+		Select select = new Select(clickOnEXPIRYDayCount);
+		String count = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,20,1);
+		select.selectByVisibleText(count);
+		Thread.sleep(1000);
+		//tapConddition.click();
+		tapHalf.click();
+		System.out.println(count);	
 	}
 	
 	public void selectInstituteEnabled() throws InterruptedException, IOException 
@@ -386,7 +476,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnINSTUTUTEENABLEDDropDown);
-		String Institute = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,18,1);
+		String Institute = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,21,1);
 		select.selectByVisibleText(Institute);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -405,7 +495,7 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnLEVELENABLEDDropDown);
-		String levle = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,19,1);
+		String levle = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,22,1);
 		select.selectByVisibleText(levle);
 		Thread.sleep(1000);
 		//tapConddition.click();
@@ -424,12 +514,31 @@ public class CreateVendorPage extends BasePage {
 		Thread.sleep(1000);
 		
 		Select select = new Select(clickOnBULKROLLENABLEDDropDown);
-		String bulk = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,20,1);
+		String bulk = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,23,1);
 		select.selectByVisibleText(bulk);
 		Thread.sleep(1000);
 		//tapConddition.click();
 		tapHalf.click();
 		System.out.println(bulk);
+	}
+	
+	public void selectRewardsEnabledEnabled() throws InterruptedException, IOException 
+	{
+		Thread.sleep(3000);
+		waitTillTheElementVisible(clickOnRewardsENABLEDDropDown);
+		JavascriptExecutor js7 = (JavascriptExecutor)driver;
+		js7.executeScript("arguments[0].scrollIntoView();",clickOnRewardsENABLEDDropDown);
+		
+		clickOnRewardsENABLEDDropDown.click();
+		Thread.sleep(1000);
+		
+		Select select = new Select(clickOnRewardsENABLEDDropDown);
+		String rewards = ExcelUserData.dataFromExcelSheet(ExcelFilePath,ExcelFileName,Excelsheetname,25,1);
+		select.selectByVisibleText(rewards);
+		Thread.sleep(1000);
+		//tapConddition.click();
+		tapHalf.click();
+		System.out.println(rewards);
 	}
 	
 	public void clickOnCREATEButton() throws InterruptedException, IOException 

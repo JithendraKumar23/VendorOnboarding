@@ -3,16 +3,16 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestCases.CreateVendorTest">
+      <class name="TestCases.ADDfcmTest">
         <methods>
           <include name="CloseFramework"/>
-          <include name="createVendor"/>
           <include name="Extent"/>
           <include name="GenerareReport"/>
           <include name="TakeScreenshot"/>
+          <include name="addFCMCredentials"/>
           <include name="initApplication"/>
         </methods>
-      </class> <!-- TestCases.CreateVendorTest -->
+      </class> <!-- TestCases.ADDfcmTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

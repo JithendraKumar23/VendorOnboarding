@@ -16,7 +16,7 @@ public class CreateVendorTest extends BaseTest {
 	@Test(enabled = true)
 	public void createVendor() throws InterruptedException, IOException
 	{	
-LoginPage loginPage = new LoginPage(driver);
+		LoginPage loginPage = new LoginPage(driver);
 		
 		loginPage.enterEmailID(UN);
 		loginPage.enterPassword(PW);
@@ -37,23 +37,40 @@ LoginPage loginPage = new LoginPage(driver);
 		createVendorPage.enterEMAIL();
 		createVendorPage.enterPassword();
 		createVendorPage.enterLogo();
-		createVendorPage.selectTheVendorMODE();
-		createVendorPage.selectTheVendorTYPE();
-		createVendorPage.selectThePLANIntervals();
-		/*createVendorPage.selectPlan();
-		createVendorPage.selectPlanMODE();
-		createVendorPage.selectTheAPPAccessMode();
+		
 		createVendorPage.enterTheAppName();
 		createVendorPage.enterTheSupportEmailAdress();
+		
+		createVendorPage.selectThePLANIntervals();
+		
+		createVendorPage.selectPlan();
+		
+		createVendorPage.selectPlanMODE();
+		
+		createVendorPage.selectTheVendorMODE();
+		
+		createVendorPage.selectTheAPPAccessMode();
+		
+		createVendorPage.selectpremieringEnabled();
+
 		createVendorPage.selectStreamEnabled();
 		createVendorPage.selectHDEnabled();
-		createVendorPage.selectADDEnabled();
+		
 		createVendorPage.selectDRMEnabled();
 		createVendorPage.selectPaymentEnabled();
+		createVendorPage.selectSubscriptionEnabled();
+		createVendorPage.selectEventEnabled();
+		createVendorPage.selectExpiryEnabled();
+		createVendorPage.selectExpiryDayCount();
+		
 		createVendorPage.selectInstituteEnabled();
 		createVendorPage.selectLevelEnabled();
 		createVendorPage.selectBulkEntrollEnabledEnabled();	
-		createVendorPage.clickOnCREATEButton();*/
+		
+		createVendorPage.selectADDEnabled();
+		createVendorPage.selectRewardsEnabledEnabled();
+		
+		//createVendorPage.clickOnCREATEButton();
 	}
 
 }

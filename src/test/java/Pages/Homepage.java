@@ -21,8 +21,8 @@ public class Homepage extends BasePage{
 	
 	public void clicONMenuButton() throws InterruptedException 
 	{
+		Thread.sleep(10000);
 		waitTillTheElementVisible(clickONMenu);
-		Thread.sleep(1000);
 		clickONMenu.click();
 	}
 

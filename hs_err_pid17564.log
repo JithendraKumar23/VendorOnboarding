@@ -1,0 +1,157 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:61), pid=17564, tid=0x00000000000034d4
+#
+# JRE version:  (8.0_171-b11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.171-b11 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003163800):  JavaThread "Unknown thread" [_thread_in_vm, id=13524, stack(0x0000000003060000,0x0000000003160000)]
+
+Stack: [0x0000000003060000,0x0000000003160000]
+[error occurred during error reporting (printing stack bounds), id 0xc0000005]
+
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000003163800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=13524, stack(0x0000000003060000,0x0000000003160000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000d5b80000, 0x00000000d8600000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000d5b80000,0x00000000d5c26670,0x00000000d7c00000)
+  from space 5120K, 0% used [0x00000000d8100000,0x00000000d8100000,0x00000000d8600000)
+  to   space 5120K, 0% used [0x00000000d7c00000,0x00000000d7c00000,0x00000000d8100000)
+ ParOldGen       total 87552K, used 0K [0x0000000081200000, 0x0000000086780000, 0x00000000d5b80000)
+  object space 87552K, 0% used [0x0000000081200000,0x0000000081200000,0x0000000086780000)
+ Metaspace       used 750K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 76K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000012620000,0x0000000012a20000] byte_map_base: 0x0000000012217000
+
+Marking Bits: (ParMarkBitMap*) 0x00000000772408c0
+ Begin Bits: [0x00000000130d0000, 0x0000000015088000)
+ End Bits:   [0x0000000015088000, 0x0000000017040000)
+
+Polling page: 0x0000000001320000
+
+CodeCache: size=245760Kb used=328Kb max_used=328Kb free=245431Kb
+ bounds [0x0000000003260000, 0x00000000034d0000, 0x0000000012260000]
+ total_blobs=58 nmethods=0 adapters=38
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.045 loading class java/lang/Short
+Event: 0.046 loading class java/lang/Short done
+Event: 0.046 loading class java/lang/Integer
+Event: 0.046 loading class java/lang/Integer done
+Event: 0.046 loading class java/lang/Long
+Event: 0.046 loading class java/lang/Long done
+Event: 0.047 loading class java/lang/NullPointerException
+Event: 0.047 loading class java/lang/NullPointerException done
+Event: 0.047 loading class java/lang/ArithmeticException
+Event: 0.047 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff7d6c60000 - 0x00007ff7d6c97000 	C:\Program Files\Java\jre1.8.0_171\bin\javaw.exe
+0x00007fffce7c0000 - 0x00007fffce9b0000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffcd460000 - 0x00007fffcd512000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffcc380000 - 0x00007fffcc625000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffcca90000 - 0x00007fffccb33000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffcd850000 - 0x00007fffcd8ee000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffcd650000 - 0x00007fffcd6e7000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffcd520000 - 0x00007fffcd63f000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffce080000 - 0x00007fffce214000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffcc810000 - 0x00007fffcc831000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffce6a0000 - 0x00007fffce6c6000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffcbfe0000 - 0x00007fffcc178000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffcc770000 - 0x00007fffcc80e000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffcc230000 - 0x00007fffcc32a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffbca40000 - 0x00007fffbccc4000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1316_none_9e7a364fe461dbd7\COMCTL32.dll
+0x00007fffcdc50000 - 0x00007fffcdf87000 	C:\WINDOWS\System32\combase.dll
+0x00007fffcc6b0000 - 0x00007fffcc731000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffccc50000 - 0x00007fffccc7e000 	C:\WINDOWS\System32\IMM32.DLL
+0x0000000077c10000 - 0x0000000077ce2000 	C:\Program Files\Java\jre1.8.0_171\bin\msvcr100.dll
+0x0000000076a20000 - 0x00000000772c0000 	C:\Program Files\Java\jre1.8.0_171\bin\server\jvm.dll
+0x00007fffcd8f0000 - 0x00007fffcd8f8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007fffc4160000 - 0x00007fffc416a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffbdc90000 - 0x00007fffbdcb4000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffc6ed0000 - 0x00007fffc6ed9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffcd3f0000 - 0x00007fffcd45f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffbdc60000 - 0x00007fffbdc8d000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007fffcc330000 - 0x00007fffcc37a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x0000000050000000 - 0x000000005000f000 	C:\Program Files\Java\jre1.8.0_171\bin\verify.dll
+0x0000000077d90000 - 0x0000000077db9000 	C:\Program Files\Java\jre1.8.0_171\bin\java.dll
+0x0000000077d70000 - 0x0000000077d86000 	C:\Program Files\Java\jre1.8.0_171\bin\zip.dll
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 
+java_command: org.testng.remote.RemoteTestNG -serport 63983 -protocol json -d C:\Users\LENOVO\workspace\VendorOnBoarding\test-output C:\Users\LENOVO\AppData\Local\Temp\testng-eclipse-351984940\testng-customsuite.xml
+java_class_path (initial): D:\eclipse-jee-oxygen-M2-win32-x86_64\eclipse\configuration\org.eclipse.osgi\969\0\.cp\lib\testng-remote.jar;C:\Users\LENOVO\workspace\VendorOnBoarding\target\test-classes;C:\Users\LENOVO\workspace\VendorOnBoarding\target\classes;C:\Users\LENOVO\.m2\repository\junit\junit\3.8.1\junit-3.8.1.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-java\3.141.59\selenium-java-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-api\3.141.59\selenium-api-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\3.141.59\selenium-chrome-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-edge-driver\3.141.59\selenium-edge-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-firefox-driver\3.141.59\selenium-firefox-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-ie-driver\3.141.59\selenium-ie-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-opera-driver\3.141.59\selenium-opera-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-remote-driver\3.141.59\selenium-remote-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-safari-driver\3.141.59\selenium-safari-driver-3.141.59.jar;C:\Users\LENOVO\.m2\repository\org\seleniumhq\selenium\selenium-support\3.141.59\selenium-support-3.141.59.jar;C:\Users\LENOVO\.m2\repository\net\bytebuddy\byte-buddy\1.8.15\byte-buddy-1.8.15.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-exec\1.3\commons-exec-1.3.jar;C:\Users\LENOVO\.m2\repository\com\google\guava\guava\25.0-jre\guava-25.0-jre.jar;C:\Users\LENOVO\.m2\repository\com\google\code\findbugs\jsr305\1.3.9\jsr305-1.3.9.jar;C:\Users\LENOVO\.m2\repository\org\checkerframework\checker-compat-qual\2.0.0\checker-compat-qual-2.0.0.jar;C:\Users\LENOVO\.m2\repository\com\google\errorprone\error_
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_171
+PATH=C:/Program Files/Java/jre1.8.0_171/bin/server;C:/Program Files/Java/jre1.8.0_171/bin;C:/Program Files/Java/jre1.8.0_171/lib/amd64;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Java\jdk1.8.0_171\bin;D:\Android\sdk\platform-tools;D:\Android\sdk\platform-tools\adb.exe;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;D:\Android\sdk\platform-tools;D:\Android\sdk\tools\bin;D:\Android\sdk\tools;D:\MY-DOC\Downloads\apache-jmeter-5.3\bin;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO\AppData\Roaming\npm;;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin;D:\eclipse-jee-oxygen-M2-win32-x86_64\eclipse;
+USERNAME=LENOVO
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 61 Stepping 4, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.1316)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 61 stepping 4, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8306796k(2033476k free), swap 33472620k(5532k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.171-b11) for windows-amd64 JRE (1.8.0_171-b11), built on Mar 28 2018 16:06:12 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Feb 02 10:28:50 2021
+elapsed time: 0 seconds (0d 0h 0m 0s)
+

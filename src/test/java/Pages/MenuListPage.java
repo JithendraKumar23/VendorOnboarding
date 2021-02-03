@@ -19,11 +19,21 @@ public class MenuListPage extends BasePage{
 	@FindBy(xpath = "//*[text()='Vendors']")
 	private WebElement selectVENODRSOption;
 	
+	@FindBy(xpath = "//*[text()='Plans']")
+	private WebElement selectPLANSOption;
+	
 	public void clicONVendorMenu() throws InterruptedException 
 	{
 		Thread.sleep(1000);
 		waitTillTheElementVisible(selectVENODRSOption);
 		selectVENODRSOption.click();
+	}
+	
+	public void clicONPLANSMenu() throws InterruptedException 
+	{
+		Thread.sleep(1000);
+		waitTillTheElementVisible(selectPLANSOption);
+		selectPLANSOption.click();
 	}
 
 

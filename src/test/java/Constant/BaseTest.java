@@ -48,7 +48,7 @@ public class BaseTest implements AutomationConstant {
 	//ExcelUserData package, To read the data from the config
 	public static String ExcelFileName = "User_Information_Automation.xlsx";
 	public static String ExcelFilePath = System.getProperty("user.dir") + "\\ExcelData\\";
-	public static String Excelsheetname = "User_Data";
+	public static String Excelsheetname = "CreateVendor";
 	public static int row = 0;
 	public static int col = 0;
 
