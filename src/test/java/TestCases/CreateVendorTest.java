@@ -13,7 +13,7 @@ import Pages.VendorListPage;
 
 public class CreateVendorTest extends BaseTest {
 	
-	@Test(enabled = true)
+	@Test(enabled = true , groups= {"SmokeTest"})
 	public void createVendor() throws InterruptedException, IOException
 	{	
 		LoginPage loginPage = new LoginPage(driver);
@@ -70,7 +70,7 @@ public class CreateVendorTest extends BaseTest {
 		createVendorPage.selectADDEnabled();
 		createVendorPage.selectRewardsEnabledEnabled();
 		
-		//createVendorPage.clickOnCREATEButton();
+		createVendorPage.clickOnCREATEButton();
 	}
 
 }

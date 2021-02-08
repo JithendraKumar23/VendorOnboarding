@@ -2,43 +2,46 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="52965" started-at="2021-02-03T06:50:01Z" finished-at="2021-02-03T06:50:54Z">
+  <suite name="Suite" duration-ms="161034" started-at="2021-02-07T09:30:25Z" finished-at="2021-02-07T09:33:06Z">
     <groups>
+      <group name="SmokeTest">
+        <method signature="CreateVendorTest.createVendor()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="createVendor" class="TestCases.CreateVendorTest"/>
+      </group> <!-- SmokeTest -->
     </groups>
-    <test name="Default test" duration-ms="52965" started-at="2021-02-03T06:50:01Z" finished-at="2021-02-03T06:50:54Z">
-      <class name="TestCases.ADDfcmTest">
-        <test-method status="PASS" signature="initApplication()[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="initApplication" is-config="true" duration-ms="17603" started-at="2021-02-03T06:49:43Z" finished-at="2021-02-03T06:50:01Z">
+    <test name="Vendor OnBoarding" duration-ms="161034" started-at="2021-02-07T09:30:25Z" finished-at="2021-02-07T09:33:06Z">
+      <class name="TestCases.CreateVendorTest">
+        <test-method status="PASS" signature="initApplication()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="initApplication" is-config="true" duration-ms="29398" started-at="2021-02-07T09:29:55Z" finished-at="2021-02-07T09:30:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initApplication -->
-        <test-method status="PASS" signature="Extent()[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="Extent" is-config="true" duration-ms="408" started-at="2021-02-03T06:50:01Z" finished-at="2021-02-03T06:50:01Z">
+        <test-method status="PASS" signature="Extent()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="Extent" is-config="true" duration-ms="2296" started-at="2021-02-07T09:30:25Z" finished-at="2021-02-07T09:30:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Extent -->
-        <test-method status="PASS" signature="addFCMCredentials()[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="addFCMCredentials" duration-ms="52008" started-at="2021-02-03T06:50:01Z" finished-at="2021-02-03T06:50:53Z">
+        <test-method status="PASS" signature="createVendor()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="createVendor" duration-ms="157729" started-at="2021-02-07T09:30:28Z" finished-at="2021-02-07T09:33:05Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addFCMCredentials -->
-        <test-method status="PASS" signature="TakeScreenshot(org.testng.ITestResult)[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="TakeScreenshot" is-config="true" duration-ms="5" started-at="2021-02-03T06:50:53Z" finished-at="2021-02-03T06:50:53Z">
+        </test-method> <!-- createVendor -->
+        <test-method status="PASS" signature="TakeScreenshot(org.testng.ITestResult)[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="TakeScreenshot" is-config="true" duration-ms="9" started-at="2021-02-07T09:33:05Z" finished-at="2021-02-07T09:33:05Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=addFCMCredentials status=SUCCESS method=ADDfcmTest.addFCMCredentials()[pri:0, instance:TestCases.ADDfcmTest@53b32d7] output={null}]]]>
+                <![CDATA[[TestResult name=createVendor status=SUCCESS method=CreateVendorTest.createVendor()[pri:0, instance:TestCases.CreateVendorTest@53b32d7] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TakeScreenshot -->
-        <test-method status="PASS" signature="GenerareReport()[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="GenerareReport" is-config="true" duration-ms="471" started-at="2021-02-03T06:50:53Z" finished-at="2021-02-03T06:50:54Z">
+        <test-method status="PASS" signature="GenerareReport()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="GenerareReport" is-config="true" duration-ms="604" started-at="2021-02-07T09:33:05Z" finished-at="2021-02-07T09:33:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GenerareReport -->
-        <test-method status="PASS" signature="CloseFramework()[pri:0, instance:TestCases.ADDfcmTest@53b32d7]" name="CloseFramework" is-config="true" duration-ms="1" started-at="2021-02-03T06:50:54Z" finished-at="2021-02-03T06:50:54Z">
+        <test-method status="PASS" signature="CloseFramework()[pri:0, instance:TestCases.CreateVendorTest@53b32d7]" name="CloseFramework" is-config="true" duration-ms="0" started-at="2021-02-07T09:33:06Z" finished-at="2021-02-07T09:33:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseFramework -->
-      </class> <!-- TestCases.ADDfcmTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- TestCases.CreateVendorTest -->
+    </test> <!-- Vendor OnBoarding -->
+  </suite> <!-- Suite -->
 </testng-results>

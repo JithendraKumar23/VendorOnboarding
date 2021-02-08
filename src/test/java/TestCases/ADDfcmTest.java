@@ -14,7 +14,7 @@ import Pages.VendorListPage;
 public class ADDfcmTest extends BaseTest {
 	
 
-	@Test(enabled = true)
+	@Test(enabled = true , groups= {"SmokeTest"})
 	private void addFCMCredentials() throws InterruptedException, IOException
 	{
         LoginPage loginPage = new LoginPage(driver);

@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-
-  <test name="Vendor OnBoarding">
-    <classes>
-    
-      <class name="TestCases.CreateVendorTest"/>
-      
-    </classes>
-  </test> 
+	<test name="Vendor OnBoarding">
+		<!-- <groups>
+			<run>
+				<include name="Complete_Vendor_Onboarding"></include>
+			</run>
+		</groups> -->
+		<classes>
+			<class name="TestCases.CreateVendorTest"/>
+		</classes>
+	</test>
 </suite>

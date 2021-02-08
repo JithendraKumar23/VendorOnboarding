@@ -24,12 +24,12 @@ public class Listeners extends BaseTest implements ITestListener{
 		test.log(LogStatus.PASS, result.getName() + " Test Case Success ");
 	}
 
-	public void onTestFailure(ITestResult result) 
+	/*public void onTestFailure(ITestResult result) 
 	{
 		System.out.println(result.getName() + " Test Case Failed ");
 		test=report.startTest(result.getName());
 		test.log(LogStatus.FAIL, result.getName() + " Test Case Failed ");
-	}
+	}*/
 
 	public void onTestSkipped(ITestResult result) 
 	{
@@ -54,6 +54,11 @@ public class Listeners extends BaseTest implements ITestListener{
 	public void onFinish(ITestContext context) 
 	{
 
+	}
+
+	public void onTestFailure(ITestResult result) {
+		// TODO Auto-generated method stub
+		
 	}
 
 
